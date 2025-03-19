@@ -8,6 +8,7 @@ Steps:
 2. Generate random sample - random values based on the probability distribution
 3. Run simulation - Repeat the process multiple times
 4. Analyze results
+<br>
 
 ## Monte Carlo $\pi$ Approximation
 
@@ -19,20 +20,23 @@ Run `main.py` to view this result
 
 - Consider a unit square (1 x 1) with a circle with radius 1 inside it with the same centre point.
 - Generate random points $(x, y)$ where $x$ and $y$ are uniformly sampled between $[-1, 1]$.
-- Then we can count how many points fall inside the circle with the condition $x^2 + y^2 \leq 1$. This helps us calculate $P(\text{points inside cricle})=\dfrac{\text{\# points inside circle}}{\text{\# total points}}$.
+- Then we can count how many points fall inside the circle with the condition $x^2 + y^2 \leq 1$. This helps us calculate $P(\text{points inside cricle})=\dfrac{\text{num of points inside circle}}{\text{num of total points}}$.
 - Note that the ratio of the $A_{circle}$ to the $A_{square}$  is $\dfrac{\pi}{4}$.
-- Then we can approximate $P(\text{points inside cricle})=\dfrac{\text{\# points inside circle}}{\text{\# total points}}\approx \dfrac{\pi}{4} \implies \pi \approx 4 \; \cdot \; \dfrac{\text{\# points inside circle}}{\text{\# total points}}$
-- Above image shows that when `n = 2560000`, `pi = 3.14165` which is accurate to its 100th decimal place. The 9 approximations with `n` being doubled shows how increasing the # of samples improves the accuracy.
+- Then we can approximate $P(\text{points inside cricle})=\dfrac{\text{num of points inside circle}}{\text{num of total points}}\approx \dfrac{\pi}{4} \implies \pi \approx 4 \cdot \dfrac{\text{num of points inside circle}}{\text{num of total points}}$
+- Above image shows that when `n = 2560000`, `pi = 3.14165` which is accurate to its 100th decimal place. The 9 approximations with `n` being doubled shows how increasing the num of samples improves the accuracy.
+<br>
 
 ## Monte Carlo in Reinforcement Learning
 
 Monte Carlo plays an important role in RL, especially in the part where the agent interacts with an environment to maximize cumulative rewards. It’s primarily used in value estimation and policy improvement. 
+<br>
 
 ### Key Applications in RL
 
 - Value Function Estimation - Evaluating state-action pairs by running multiple episodes and averaging their returns.
 - Policy Evaluation & Improvement - Simulating actions using different policies → determine which one performs the best.
 - Exploration - Randomized action selection to explore the environment.
+<br>
 
 ### Example of Monte Carlo in RL
 
@@ -49,6 +53,7 @@ The robot is placed in a maze, and needs to learn the best path to exit.
 3. Record rewards for each action (path taken)
 4. Compute average returns - after many episodes, the robot calculates which action led faster and safer paths ← Monte Carlo
 5. Policy is updated 
+<br>
 
 ### Monte Carlo Tree Decision
 
