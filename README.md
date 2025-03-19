@@ -1,6 +1,6 @@
 # Monte Carlo Simulation
 
-Monte Carlo Simulation is a computational technique that uses random sampling to solve probabilistic and mathematical problems. The core idea is to simulate numerous possible outcomes and use statistical analysis to estimate the result.
+Monte Carlo Simulation uses random sampling to solve probabilistic and mathematical problems. The main idea is to repeat the possible outcomes multiple times and use statistical analysis to estimate the result.
 
 Steps:
 
